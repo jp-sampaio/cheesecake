@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-family: 'Source Serif Pro';
+  font-size: 63.5%;
+
+  --cl-general: #A54328;
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--cl-general);
+}
+
+main {
+  max-width: 32rem;
+  padding: 5.6rem 4rem;
+  /* margin-inline é os espaçamentos nas laterais  */
+  margin-inline: auto;
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+img {
+  width: 100%;
+  /* margin-block é os espaçamentos superior e inferior  */
+  margin-block: 3.2rem;
+}
+
+h1, h2 {
+  /* clamp ( min, ideal, max)*/
+  font-size: clamp(2.8rem, 2vw + 1rem, 4rem);
+}
+
+h2 {
+  margin-bottom: 3.2rem;
+}
+
+p, strong, li {
+  font-size: clamp(1.4rem, 1vw + .4rem,2rem);
+}
+
+ul, ol {
+  padding-left: 3.2rem;
+}
+
+ul {
+  margin-bottom: 2rem;
+}
+
+button {
+  font-family: 'Source Serif 4';
+  background-color: var(--cl-general);
+  color: #ffffff;
+  border: none;
+  padding: .8rem 1.2rem;
+  border-radius: .6rem;
+  margin-top: 3.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1120px) {
+  main {
+    flex-direction: row;
+    max-width: fit-content;
+    gap: 18.9rem;
+    padding: 9rem 6rem;
+  }
+
+  .recipe {
+    max-width: 43.5rem;
+  }
+
+  .ingredients {
+    max-width: 52.5rem;
+  }
+
+  button {
+    padding: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}
